@@ -1,6 +1,7 @@
 <html>
     <title>{{course.course_id}}</title>
     <body>
+        {% if course %}
         <h1>Information for {{course.course_id}}</h1>
         <ul style = "font-size: larger;">
             <li>Course Code: {{course.course_id}}</li>
@@ -11,5 +12,8 @@
             <li>Category: {{course.category}}</li>
             <li>Average Rating: {{course.avg_rating}}</li>
         </ul>
+        {% else %}
+        Oops, JI does not have this course. Please check the course code and try again
+        {% endif %}
     </body>
 </html>

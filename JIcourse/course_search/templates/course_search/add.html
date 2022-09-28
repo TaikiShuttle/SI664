@@ -1,0 +1,31 @@
+<html>
+    <title> Add a Course </title>
+    <body>
+        <h1> In this site you can add a course record</h1>
+        <form method = "post">
+            <p><label for = "add_course_id">Please enter course code</label>
+            {% csrf_token %}
+                <input type = "text" name = "course_id" size = 100 id = "add_course_id"/>
+            </p>
+            <p><label for = "add_course_name">Please enter course name</label>
+                <input type = 'text' name = "course_name" size = 200 id = "add_course_name"/>
+            </p>
+            <p><label for = "add_course_instructor">Please enter instructor</label>
+                <input type = "text" name = "instructor" size = 100 id = "add_instructor"/>
+            </p>
+            <p><label for = "add_last_offered">Please enter the most recent semester when this course is offered, in the form like (2022SU)</label>
+                <input type = "text" name = "last_offered" size = 10 id = "add_last_offered"/>
+            </p>
+            <p><label for = "add_credit">Please enter course credit</label>
+                <input type = "text" name = "credit" size = 10 id = "add_credit"/>
+            </p>
+            <p><label for = "add_category">Please enter course category</label>
+                <input type = "text" name = "category" size = 100 id = "add_category"/>
+            </p>
+            <p><label for = "add_avg_rating">Please enter the average rating of this course</label>
+                <input type = "text" name = "average_rating" size = 10 id = "add_avg_rating"/>
+            </p>
+            <input type = "submit"/>
+        </form>
+    </body>
+</html>
