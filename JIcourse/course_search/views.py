@@ -76,3 +76,7 @@ def add_fail(request):
 def result(request, course_id:str):
     course = Course.objects.get(course_id = course_id)
     return render(request = request, template_name = "course_search/result.html", context = {'course': course})
+
+def course_list(request):
+    courses = Course.objects.all()
+    return render(request = request, template_name = "course_search/course_list.html", context = {'courses': courses})

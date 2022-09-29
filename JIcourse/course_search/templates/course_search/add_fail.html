@@ -2,7 +2,7 @@
     <title>Failed!</title>
     <body>
         <h1>Oops! {{course_id}} already exists in the database!</h1>
-        <p><button type = 'button'><a href = "{% url 'greet'%}">Go Back to Main Page</a></button></p>
-        <p><button type = 'button'><a href = "{% url 'add'%}">Add course again</a></button></p>
+        <p><button type = 'button'><a href = "{% url 'main:mainsite'%}">Go Back to Main Page</a></button></p>
+        <p><button type = 'button'><a href = "{% url 'course_search:add'%}">Add course again</a></button></p>
     </body>
 </html>

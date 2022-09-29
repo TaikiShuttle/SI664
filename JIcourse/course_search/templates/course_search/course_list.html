@@ -1,0 +1,15 @@
+<html>
+    <title>JI course list</title>
+    <body>
+        <h1>JI course list</h1>
+        {% if courses%}
+        <ui>
+            {% for course in courses %}
+            <li><a href = "{% url 'course_search:result' course.course_id %}">{{course.course_id}}</li>
+            {% endfor %}
+        </ui>
+        {% else %}
+            There is currently no course in the database. Please add course through <a href = "{% url 'course_search:add' %}">here</a>.
+        {% endif %}
+    </body>
+</html>

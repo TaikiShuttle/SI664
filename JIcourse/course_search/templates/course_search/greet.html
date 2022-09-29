@@ -17,7 +17,8 @@
         <p>
             Please see my Github <a href = "https://www.github.com/TaikiShuttle"><b>TaikiShuttle</b></a> for more information
         </p>
-        <p><button type = "button"><a href = "{% url 'search' %}">Search Course Now!</button></p>
-        <p><button type = "button"><a href = "{% url 'add' %}">Add New Course to Database</a></button>
+        <p><button type = "button"><a href = "{% url 'course_search:search' %}">Search Course Now!</button></p>
+        <p><button type = "button"><a href = "{% url 'course_search:add' %}">Add New Course to Database</a></button>
+        <p><button type = "button"><a href = "{% url 'course_search:course_list' %}">Check Course List and Find Course!</a></button>            
     </body>
 </html>
